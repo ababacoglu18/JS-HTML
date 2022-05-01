@@ -1,0 +1,59 @@
+<script>
+
+    var calisan = {
+            isim : "Ahmet ",
+            soyisim: "Türk",
+            numara : 123456,
+            diller : ["Php", "C++" , "Java"],
+            adres : {
+                cadde : "Çiçek cd.",
+                sokak : 1254,
+            }, 
+            isimBilgileri : function(){
+
+                return "çalışan bilgileri: " + this.adres.cadde + this.diller[0];
+            }
+    };
+
+    console.log(calisan.soyisim);
+    console.log(calisan.diller[2]);
+    console.log(calisan.diller);
+
+    console.log(calisan.adres.cadde);
+
+    console.log(calisan.isimBilgileri());
+
+
+
+    var ak47 = new Object();
+
+    ak47.silahTuru = "Assult";
+    ak47.mermiKapasite = 32;
+
+    ak47.TumOzellikler = function(){
+
+        return this.silahTuru + " " + this.mermiKapasite;
+    }
+
+    console.log(ak47.TumOzellikler());
+
+
+//CONSTRUCTOR PATTERN
+    function Envanter(mermihizi, agirlik, renk){
+            this.mermihizi = mermihizi;
+            this.agirlik = agirlik;
+            this.numara = renk;
+            this.bilgileriGoster = function(){
+                return "mermi hızı: " + mermihizi +  " agirlik" + agirlik + " renk" + renk;
+            }
+    }
+
+    var silah1 = new Envanter(235,15,"siyah");
+    var silah2 = new Envanter(300,17,"gri");
+    var silah3 = new Envanter(320,20,"mor");
+
+    console.log(silah1.bilgileriGoster());
+    console.log(silah2.bilgileriGoster());
+    console.log(silah3.bilgileriGoster());
+
+</script>
