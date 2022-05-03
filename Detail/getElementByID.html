@@ -1,6 +1,17 @@
 
 <body>
     <h2 id="title">Hello World</h2>
+  
+  <ul id = "list">
+    <li><a href="kodluyoruzLink">hi</a></li>
+  </ul>
+  
+  
+  
+ 
+  
+  
+  
   <script>
 document.body.style.backgroundColor = 'aqua' 
 let h2 = document.getElementsByTagName('h2')
@@ -9,6 +20,18 @@ console.log(h2.title.innerHTML)         //SÜrekli kullanılmıyor.
 let title = document.getElementById('title')
 console.log(title.innerHTML)
 
+title.innerHTML = "Merhaba Dunya"
+console.log(title.innerHTML) 
+
+
+
+let link = document.querySelector("#kodluyoruzLink")
+
+console.log(link.innerHTML)    //ul icerisinden alindi. 
+
+link.innerHTML += " degisti."
+
+link.style.backgroundColor = "blue"
 
   </script>
     
